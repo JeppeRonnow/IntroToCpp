@@ -1,0 +1,3 @@
+/media/jeppe/CoolDisk/GitHub/IntroToCpp/HowToClass/build/CMakeFiles/HowToClass.dir
+/media/jeppe/CoolDisk/GitHub/IntroToCpp/HowToClass/build/CMakeFiles/edit_cache.dir
+/media/jeppe/CoolDisk/GitHub/IntroToCpp/HowToClass/build/CMakeFiles/rebuild_cache.dir
