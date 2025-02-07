@@ -1,22 +1,21 @@
-#ifndef PERSON_H
-#define PERSON_H
+#ifndef PERSON2_H
+#define PERSON2_H
 
 #pragma once
 #include <string>
 #include "Dato.h"
-#include "Bil.h"
 
 using namespace std;
 
-class Person
+class Person2
 {
 public:
-    Person();
-    Person(string, string, Dato);
+    Person2();
+    Person2(string, string, Dato);
     string getNavn();
     string getMail();
     Dato getFdato();
-    ~Person();
+    ~Person2();
 
 private:
     string navn;

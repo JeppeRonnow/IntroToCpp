@@ -8,4 +8,4 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Add Executable
-add_executable(3classes main.cpp Dato.cpp Person.cpp Bil.cpp)
+add_executable(3classes main.cpp Dato.cpp Person2.cpp Car.cpp)
