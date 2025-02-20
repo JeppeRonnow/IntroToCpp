@@ -4,6 +4,7 @@
 #pragma once
 #include <string>
 #include "Dato.h"
+#include "Car.h"
 
 using namespace std;
 
@@ -15,13 +16,15 @@ public:
     string getNavn();
     string getMail();
     Dato getFdato();
+    Car getCar();    
+    void addCar(Car);
     ~Person2();
 
 private:
     string navn;
     string mail;
     Dato fDag;
-    //bil
+    Car car;
 };
 
 #endif

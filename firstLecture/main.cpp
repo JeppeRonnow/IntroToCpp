@@ -8,21 +8,48 @@ using namespace std;
 int main(){
     Dato dd(20250206);
 
-    cout << "Dato: " << dd.getDatoen() << endl;
-    cout << "År: " << dd.getAar() << endl;
+    cout << "Dato: " << dd.getDatoen() << "\n";
+    cout << "År: " << dd.getAar() << " Kavrtal: " << dd.getKvartal() << " Måned: " << dd.getMaaned() << " Dag: " << dd.getDag() << "\n";
 
     Dato pf(20030116);
     Person2 jeppe("Jeppe", "jeppe@jeppe", pf);
 
-    cout << "Name: " << jeppe.getNavn() << endl;
-    cout << "Mail: " << jeppe.getMail() << endl;
-    cout << "Fødselsdato: " << jeppe.getFdato().getAar() << endl;
+    cout << "Name: " << jeppe.getNavn() << "\n";
+    cout << "Mail: " << jeppe.getMail() << "\n";
+    cout << "Fødselsdato: " << jeppe.getFdato().getAar() << "\n";
 
-    Car skoda(jeppe, "ABC123", "Skoda", "Octavia");
-    cout << "Ejer: " << skoda.getEjer().getNavn() << endl;
-    cout << "Regnr: " << skoda.getRegnum() << endl;
-    cout << "Maerke: " << skoda.getMake() << endl;
-    cout << "Model: " << skoda.getModel() << endl;
+    
+
+    Car skoda("ABC123", "Skoda", "Octavia");
+
+    jeppe.addCar(skoda);
+
+    cout << "Regnr: " << skoda.getRegnum() << "\n";
+    cout << "Maerke: " << skoda.getMake() << "\n";
+    cout << "Model: " << skoda.getModel() << "\n" << "\n";
+
+
+
+
+    for (int i = 0; i < 365*3; i++){
+        dd.setDatoPlusEn();
+    }
+
+    cout << "Dato: " << dd.getDatoen() << "\n";
+    cout << "År: " << dd.getAar() << " Kavrtal: " << dd.getKvartal() << " Måned: " << dd.getMaaned() << " Dag: " << dd.getDag() << "\n";
+
+    if (dd.getLeapYear() == true){
+        cout << "Det er skydår" << "\n";
+    } else {
+        cout << "Det ikke skydår" << "\n";
+    }
+
+    cout << "Dage forbi: " << dd.dagIaar() << "\n";
+    cout << "Dage tibage: " << dd.restDagIaar() << "\n" << "\n";
+
+
+    dd.setDatoMinusEn();
+    cout << "Dato: " << dd.getDatoen() << "\n";
 
 
     return 0;

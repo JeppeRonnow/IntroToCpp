@@ -1,4 +1,8 @@
 #include "headers/Person2.h"
+#include "headers/Car.h"
+
+
+
 using namespace std;
 Person2::Person2()
 {
@@ -21,6 +25,10 @@ string Person2::getMail(){
 
 Dato Person2::getFdato(){
     return fDag;
+}
+
+void Person2::addCar(Car c){
+    car = c;
 }
 
 Person2::~Person2()

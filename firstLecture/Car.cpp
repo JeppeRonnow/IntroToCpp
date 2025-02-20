@@ -9,16 +9,12 @@ Car::Car()
 
 }
 
-Car::Car(Person2 o, string r, string m, string mo){
-    driver = o;
+Car::Car(string r, string m, string mo){
     regnum = r;
     make = m;
     model = mo;
 }
 
-Person2 Car::getEjer(){
-    return driver;
-}
 
 string Car::getRegnum(){
     return regnum;
