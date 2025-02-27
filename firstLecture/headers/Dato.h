@@ -21,7 +21,7 @@ public:
     int dagIaar();
     int restDagIaar();
     bool validDato();
-
+    int dageMellem(int);
     //setters
     void setDatoen(int);
     void setAar(int);

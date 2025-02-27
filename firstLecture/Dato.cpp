@@ -47,7 +47,7 @@ void Dato::setMaaned(int m){
 void Dato::setDag(int d){
     datoen = (datoen / 100) * 100 + d;
 }
-
+  
 int Dato::dagIaar(){
     int daysInMonth[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     int day = getDag();
@@ -180,6 +180,26 @@ bool Dato::validDato(){
     return true;
 }
 
+int Dato::dageMellem(int endDate){
+    int idag = datoen;
+
+    int dage = 0;
+    if (datoen < endDate){
+        while (datoen < endDate){
+            setDatoPlusEn();
+            dage++;
+        }
+    }
+    else {
+        while (datoen > endDate){
+            setDatoMinusEn();
+            dage++;
+        }
+    }
+    datoen = idag;
+
+    return dage;
+}
 
 Dato::~Dato(){
 

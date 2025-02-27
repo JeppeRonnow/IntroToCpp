@@ -47,9 +47,10 @@ int main(){
     cout << "Dage forbi: " << dd.dagIaar() << "\n";
     cout << "Dage tibage: " << dd.restDagIaar() << "\n" << "\n";
 
-
-    dd.setDatoMinusEn();
     cout << "Dato: " << dd.getDatoen() << "\n";
+
+
+    cout << "dage til 20270205: " << dd.dageMellem(20270205) << "\n";
 
 
     return 0;
