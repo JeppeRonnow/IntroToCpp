@@ -1,0 +1,3 @@
+/home/jeppe/GitHub/IntroToCpp/EAN/CMakeFiles/EAN.dir
+/home/jeppe/GitHub/IntroToCpp/EAN/CMakeFiles/edit_cache.dir
+/home/jeppe/GitHub/IntroToCpp/EAN/CMakeFiles/rebuild_cache.dir
