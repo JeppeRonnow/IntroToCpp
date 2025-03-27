@@ -14,12 +14,12 @@ class Distrikt {
     
     public:
         Distrikt(int prisM3);
-        void addForbruger(Forbruger forbruger);
+        void addForbruger(Forbruger& forbruger);
         int afregnForbruger(int maalerNr);
         
 
     private:
-        vector<Forbruger> forbrugere;
+        vector<Forbruger*> forbrugere;
         int antalForbrugere;
         int prisM3;
 };

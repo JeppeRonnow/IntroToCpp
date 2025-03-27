@@ -22,6 +22,7 @@ int main() {
     niels.aflaesMaeler(608);
     niels.aflaesMaeler(724);
 
+
     // Udregn forbrugsafregning for hver forbruger
     std::cout << svindinge.afregnForbruger(1206) << std::endl; // Udskriver 7332
     std::cout << svindinge.afregnForbruger(1227) << std::endl; // Udskriver 9048

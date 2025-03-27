@@ -1,22 +1,19 @@
-#include <../headers/Distrikt.hpp>
-#include <../headers/Forbruger.hpp>
-
+#include "../headers/Distrikt.hpp"
+#include "../headers/Forbruger.hpp"
 
 Distrikt::Distrikt(int prisM3) {
     this->prisM3 = prisM3;
 }
 
-void Distrikt::addForbruger(Forbruger forbruger) {
-    forbrugere.push_back(forbruger);
-    antalForbrugere++;
+void Distrikt::addForbruger(Forbruger& f) {
+    forbrugere.push_back(&f);
 }
 
-int Distrikt::afregnForbruger(int maalerNr) {
-    for (int i = 0; i < antalForbrugere; i++) {
-        if (forbrugere[i].getMaalerNr() == maalerNr) {
-            return forbrugere[i].beregnForbrug() * prisM3;
+int Distrikt::afregnForbruger(int maalerNummer) {
+    for (auto f : forbrugere) {
+        if (f->getMaalerNr() == maalerNummer) {
+            return f->beregnForbrug() * prisM3;
         }
     }
-
     return -1;
 }
