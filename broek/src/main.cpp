@@ -52,10 +52,12 @@ int main() {
 
     // Test med negative tal
     Broek negativ(-4, 8);  // Skal forkortes til -1/2
+    negativ.forkort();
     visBroek(negativ, "Negativ (forkortet fra -4/8): ");
 
     // Test edge-case (nul tæller)
     Broek nulTaeller(0, 5);  // Skal være 0/1 efter forkortning
+    nulTaeller.forkort();
     visBroek(nulTaeller, "Nul-taeller (0/5): ");
 
     return 0;

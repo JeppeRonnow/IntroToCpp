@@ -31,21 +31,25 @@ void Broek::forkort() {
 
 Broek Broek::adder(Broek aF) {
     Broek sum(taeller * aF.naevner + aF.taeller * naevner, naevner * aF.naevner);
+    sum.forkort();
     return sum;
 }
 
 Broek Broek::subtraher(Broek aF) {
     Broek diff(taeller * aF.naevner - aF.taeller * naevner, naevner * aF.naevner);
+    diff.forkort();
     return diff;
 }
 
 Broek Broek::multiplicer(Broek aF) {
     Broek prod(taeller * aF.taeller, naevner * aF.naevner);
+    prod.forkort();
     return prod;
 }
 
 Broek Broek::divider(Broek aF) {
     Broek quot(taeller * aF.naevner, naevner * aF.taeller);
+    quot.forkort();
     return quot;
 }
 
