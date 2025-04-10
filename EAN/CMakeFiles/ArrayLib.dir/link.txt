@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/ArrayLib.dir/src/EAN.cpp.o CMakeFiles/ArrayLib.dir/src/main.cpp.o -o ArrayLib 
