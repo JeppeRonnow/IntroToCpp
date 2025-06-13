@@ -15,20 +15,19 @@ string Vaerksted::getEjer() {
     return ejeren;
 }
 
-void Vaerksted::addBil(Bil &enB) {
+void Vaerksted::addBil(Bil& enB) {
     biler.push_back(enB);
 }
 
-void Vaerksted::addMekaniker(Mekaniker &enM) {
+void Vaerksted::addMekaniker(Mekaniker& enM) {
     mekanikere.push_back(enM);
 }
 
-void Vaerksted::addArbejdsSeddel(ArbejdsSeddel &enA) {
+void Vaerksted::addArbejdsSeddel(ArbejdsSeddel& enA) {
     arbejdsSedler.push_back(enA);
 }
 
 Vaerksted::~Vaerksted() {}
-
 
 // see if cars from biler is in arbejdsSedler
 void Vaerksted::ingenRegning() {
@@ -41,7 +40,7 @@ void Vaerksted::ingenRegning() {
                 break;
             }
             // If we reach here, it means the car was not found in any work order
-            if (&seddel == &arbejdsSedler.back()) { // Check if it's the last seddel
+            if (&seddel == &arbejdsSedler.back()) {  // Check if it's the last seddel
                 ejer.push_back(bil.getEjer());
             }
         }
@@ -69,13 +68,12 @@ void Vaerksted::mekanikerTimer() {
         }
         cout << "Mekaniker " << mekaniker.getNavn() << " har arbejdet i " << timer << " timer." << endl;
     }
-
 }
 
 string Vaerksted::senesteArbejde() {
     string seneste = std::to_string(arbejdsSedler[arbejdsSedler.size() - 1].getDatoen());
 
-    return  seneste.substr(6, 2) + "/" +
-            seneste.substr(4, 2) + "/" + 
-            seneste.substr(0, 4);
+    return seneste.substr(6, 2) + "/" +
+           seneste.substr(4, 2) + "/" +
+           seneste.substr(0, 4);
 }
